@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+var descuento = 0;
+var Porcentaje = 0;
+
+var producto1 = 100;
+var producto2 = 500;
+var producto3 = 400;
+
+var edad = 22;
+
+var SubTotal = producto1 + producto2 + producto3;
+
+if (SubTotal >= 1000 && edad < 21) {
+Porcentaje = 40
+descuento = SubTotal * .40;
+}
+
+else if (SubTotal >= 1000 && edad > 21) {
+Porcentaje = 30;
+descuento = SubTotal * .30;
+}
+
+else if (SubTotal < 999 || edad > 21) {
+  Porcentaje = 10;
+  descuento = SubTotal * .10;
+}
+
+var Total = SubTotal - descuento;
+
+console.log("Edad: " + edad + " años");
+console.log("Descuento: $" + descuento + " (" + Porcentaje + "%)" );
+console.log("Precio sin descuento: $" + SubTotal);
+console.log("Precio con descuento: $" + Total);
+</script>
+</body>
+</html>
+
